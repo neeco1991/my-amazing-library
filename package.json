@@ -1,0 +1,40 @@
+{
+  "name": "wildfire-client-lib",
+  "private": true,
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/wfc.umd.js",
+  "module": "./dist/wfc.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/wfc.es.js",
+      "require": "./dist/wfc.umd.js"
+    },
+    "./dist/wfc.css": {
+      "import": "./dist/wfc.css",
+      "require": "./dist/wfc.css"
+    }
+  },
+  "types": "./dist/main.d.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "path": "^0.12.7",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2",
+    "vite-plugin-dts": "^2.3.0",
+    "vue-tsc": "^1.4.2"
+  }
+}
