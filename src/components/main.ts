@@ -17,4 +17,4 @@ export default {
   },
 };
 
-export { HelloWorld, MyButton };
+export { HelloWorld, MyButton, IconFeature, LineFeature, Map };
