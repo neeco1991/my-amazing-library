@@ -11,9 +11,9 @@ export default {
   install: (app: App) => {
     app.component('HelloWorld', HelloWorld);
     app.component('MyButton', MyButton);
-    app.component('wfc-icon', IconFeature);
-    app.component('wfc-line', LineFeature);
-    app.component('wfc-map', Map);
+    app.component('IconFeature', IconFeature);
+    app.component('LineFeature', LineFeature);
+    app.component('Map', Map);
   },
 };
 
