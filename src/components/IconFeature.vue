@@ -9,6 +9,8 @@ const props = defineProps<{
   selected?: boolean;
   icon?: string;
   id: string;
+  zindex?: number;
+  scale?: number;
 }>();
 
 const overlayActive = ref<boolean>(false);
@@ -58,11 +60,14 @@ watch(
     :filter="selectInteactionFilter"
   >
     <ol-style>
-      <ol-style-icon :src="icon || markerIcon"></ol-style-icon>
+      <ol-style-icon
+        :src="icon || markerIcon"
+        :scale="scale || 1"
+      ></ol-style-icon>
     </ol-style>
   </ol-interaction-select>
 
-  <ol-vector-layer>
+  <ol-vector-layer :zIndex="zindex || 1">
     <ol-source-vector>
       <ol-feature :properties="{ id }">
         <ol-geom-point :coordinates="coordinates"></ol-geom-point>
@@ -70,7 +75,10 @@ watch(
     </ol-source-vector>
 
     <ol-style>
-      <ol-style-icon :src="icon || markerIcon" :scale="0.75"></ol-style-icon>
+      <ol-style-icon
+        :src="icon || markerIcon"
+        :scale="0.75 * (scale || 1)"
+      ></ol-style-icon>
     </ol-style>
   </ol-vector-layer>
 </template>
