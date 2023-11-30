@@ -1,6 +1,6 @@
 {
-  "name": "wildfire-client-lib",
-  "private": true,
+  "name": "my-amazing-library",
+  "private": false,
   "version": "0.0.1",
   "files": [
     "dist"
